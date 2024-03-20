@@ -59,7 +59,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 20px 35px;
-    background-color: white;
+    background-color: #fff;
 }
 
 #menu-icon{
@@ -76,16 +76,15 @@ header{
 }
 
 .logo span{
-    color:var(--main-color);
+    color: var(--main-color);
 }
 
 .navbar{
-
     display: flex;
     column-gap: 2rem;
 }
 
-.navbar{
+.navbar a{
     color: var(--text-color);
     font-size: 1rem;
     text-transform: uppercase;
@@ -109,24 +108,14 @@ header{
     right: 0;
     left: 0;
     background: var(--bg-color);
-    box-shadow: 4px 4px 20px rgb(15 45 55 /10%);
-    border: 1px solid var(--main-color);
+    box-shadow: 4px 4px 20px rbg(15 45 55 / 10%);
     border-radius: 0.5rem;
+    border: 1px solid var(--main-color);
     clip-path: circle(0% at 100% 0%);
 }
 
 .search-box.active{
-    clip-path: circle(144 at 100% 0%);
-    transition: 0.4s;
-}
-
-.search-box input{
-    width: 100%;
-    padding: 20px;
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 1rem;
+    clip-path: circle(144% at 100% 0%);
 }
 
 .home{
