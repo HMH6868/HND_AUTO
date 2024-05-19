@@ -1,8 +1,16 @@
 const cartContainer = document.querySelector(".cart-container .cart-box");
 const payMoneyNow = document.querySelector(".pay-money-now");
 const payMoney = document.querySelector(".pay-money");
+const payButton = document.querySelector(".pay-button");
+const paymentForm = document.getElementById("payment-form");
+const paymentMethodSelect = document.getElementById("payment-method");
+const qrCode = document.getElementById("qr-code");
+const confirmPaymentButton = document.getElementById("confirm-payment");
+const paymentOverlay = document.getElementById("payment-overlay");
+
 let money = 0;
 let cartDeleteBtn;
+
 renderCart();
 
 function renderCart() {
@@ -10,7 +18,7 @@ function renderCart() {
         let cartInnerHTML = "";
         money = 0;
         cartItems.items.forEach((element, index) => {
-            console.log(element)
+            console.log(element);
             money += Number(element.price);
             cartInnerHTML += `
             <div class="cart-item">
@@ -56,14 +64,57 @@ function renderCart() {
         cartContainer.innerHTML = `
             <div class="no-cart__img"></div>
             <div class="cart-box__bottom">
-                <a href="./tourDuLich.html" class="cart-back">Tiếp tục chọn tour</a>
+                <a href="./carsPage.html" class="cart-back">Tiếp tục chọn tour</a>
             </div>`;
     }
-    if(cartItems.items.length <= 0)
-    {
+    if (cartItems.items.length <= 0) {
         money = 0;
     }
     payMoneyNow.innerHTML = money.toLocaleString("en-US").toString() + "₫";
     payMoney.innerHTML = money.toLocaleString("en-US").toString() + "₫";
 }
-renderCart();
+
+// Xử lý sự kiện click nút "Thanh Toán"
+payButton.addEventListener("click", () => {
+    paymentForm.classList.add("active");
+    paymentOverlay.classList.add("active");
+});
+
+// Xử lý sự kiện thay đổi phương thức thanh toán
+paymentMethodSelect.addEventListener("change", (e) => {
+    if (e.target.value === "bank") {
+        qrCode.style.display = "block";
+    } else {
+        qrCode.style.display = "none";
+    }
+});
+
+// Xử lý sự kiện click nút "Xác nhận thanh toán"
+// Xử lý sự kiện click nút "Xác nhận thanh toán"
+confirmPaymentButton.addEventListener("click", () => {
+    // Kiểm tra xem tất cả các trường đã được điền đầy đủ hay không
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+    const phone = document.getElementById("phone").value;
+    const paymentMethod = document.getElementById("payment-method").value;
+
+    if (name.trim() === "" || address.trim() === "" || phone.trim() === "" || paymentMethod.trim() === "") {
+        alert("Vui lòng điền đầy đủ thông tin thanh toán.");
+        return; // Ngăn chặn tiến trình tiếp tục nếu thông tin chưa đầy đủ
+    }
+
+    // Nếu thông tin đã được điền đầy đủ, tiến hành xác nhận thanh toán
+    alert("Đặt hàng thành công!");
+    cartItems = { amount: 0, items: [] };
+    localStorage.setItem("cart-items", JSON.stringify(cartItems));
+    renderCart();
+    paymentForm.classList.remove("active");
+    paymentOverlay.classList.remove("active");
+});
+
+
+// Xử lý sự kiện click vào overlay để ẩn form thanh toán
+paymentOverlay.addEventListener("click", () => {
+    paymentForm.classList.remove("active");
+    paymentOverlay.classList.remove("active");
+});

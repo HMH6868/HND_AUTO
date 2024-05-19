@@ -164,9 +164,6 @@ function handleItemCar(idx) {
                     <button data-item=${idx} class="itemCar__rightcolumn--card--btn order-btn">
                         Đặt Xe
                     </button>
-                    <button class="itemCar__rightcolumn--card--btn">
-                        Yêu cầu đặt
-                    </button>
                 </div>
             </div>
         </div>

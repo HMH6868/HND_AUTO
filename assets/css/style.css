@@ -107,7 +107,7 @@
     width: 100%;
     box-shadow: 0 0px 4px 4px #ccc;
     background-color: #fff;
-    z-index: 999;
+    z-index: 998;
 }
 
 .header-top {
@@ -504,6 +504,9 @@ body::-webkit-scrollbar-track {
     display: block;
 }
 
+.footer-legal{
+    text-align: center;
+}
 .footer-custom .footer-legal a {
     display: inline;
 }
@@ -574,11 +577,16 @@ body::-webkit-scrollbar-track {
 }
 
 .footer-social {
+    padding-bottom:10px;
     text-align: center;
+}
+.footer-social p{
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .footer-social ul {
-    padding: 0;
+    padding: 10px 0 0 0 ;
     display: inline-block;
     list-style-type: none;
 }
