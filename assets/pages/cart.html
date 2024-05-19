@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="../imgs/logo/VinFast-logo.svg">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/config.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/grid.css" />
+        <link rel="stylesheet" href="../css/gioiThieu.css" />
+        <link rel="stylesheet" href="../css/cart.css" />
+        <link rel="stylesheet" href="../css/responsive.css" />
+        <title>HND Auto</title>
+    </head>
+    <body>
+        <div class="web-container">
+        <!-- Header Mobile -->
+        <header id="header-mobile">
+            <nav class="nav-bar">
+                <a href="../../index.html" class="center logo-link full-h">
+                    <img src="../imgs/logo/VinFast-logo.svg" alt="logo" class="logo-img full-h" />
+                </a>
+
+                <ul class="nav-menu">
+                    <div data-page="trang-chu" class="navbar-item">
+                        <a class="nav-link" data-link="homepage" href="../../index.html">
+                            Trang chủ
+                        </a>
+                    </div>
+                    <div data-page="gioi-thieu" class="navbar-item">
+                        <a class="nav-link" data-link="gioiThieu" href="../pages/gioiThieu.html">
+                            Giới thiệu
+                        </a>
+                    </div>
+                    <div data-page="xe-dien" class="navbar-item">
+                        <a class="nav-link" data-link="xeDien" href="../pages/carsPage.html">
+                            Ô tô
+                        </a>
+                    </div>
+                    <div data-page="news" class="navbar-item">
+                        <a class="nav-link" data-link="tinTuc" href="../pages/tinTuc.html">
+                            Tin tức
+                        </a>
+                    </div>
+                    <div data-page="faq" class="navbar-item">
+                        <a class="nav-link" data-link="FAQ" href="../pages/FAQ.html">
+                            FAQ
+                        </a>
+                    </div>
+                    <div data-page="contact" class="navbar-item">
+                        <a class="nav-link" data-link="lienHe" href="../pages/lienHe.html">
+                            Liên hệ
+                        </a>
+                    </div>
+                </ul>
+                <div class="account-box">
+                    <a href="#" class="account-link center">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <ul class="account-tool">
+                        <li class="account-tool__item center">
+                            <a href="../pages/account_signin.html" class="account-tool__item-link">Đăng Nhập</a>
+                        </li>
+                        <li class="account-tool__item center">
+                            <a href="../pages/account_signup.html" class="account-tool__item-link">Đăng Ký</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="favorite-box">
+                    <i class="fa-solid fa-heart fa-beat"><span class="status">0</span></i>
+                    <div class="favorite-info">
+                        <span class="favorite-infor__title">
+                            Những ô tô yêu thích (<span class="favorite-info__status">0</span>)
+                        </span>
+                        <div class="favorite-list">
+                            <i class="fa-solid fa-heart favorite-info__no-cart-icon fa-beat"></i>
+                            <span class="favorite-info__no-cart-title">Hiện chưa có ô tô yêu thích, hãy thêm ngay
+                                nhé!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-box">
+                    <a href="../pages/cart.html" class="cart-link center">
+                        <i class="fa-solid fa-cart-shopping fa-bounce">
+                            <span class="status">0</span>
+                        </i>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Header -->
+        <header id="header">
+            <div class="row header-top">
+                <div class="col center logo l-3 m-6 s-12 full-h">
+                    <a href="../../index.html" class="center logo-link full-h">
+                        <img src="../imgs/logo/VinFast-logo.svg" alt="logo" class="logo-img full-h" />
+                    </a>
+                </div>
+                <div class="col l-5">
+                    <div class="search-box center center-m">
+                        <input type="text" placeholder="Nhập vào để tìm kiếm thứ bạn muốn" class="search-input" />
+                        <button class="search-btn center">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col logo l-3 m-6 s-12 account-and-cart center">
+                    <div class="account-box">
+                        <a href="../pages/account.html" class="account-link center">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Tài khoản</span>
+                        </a>
+                        <ul class="account-tool">
+                            <li class="account-tool__item center">
+                                <a href="../pages/account_signin.html" class="account-tool__item-link">Đăng
+                                    Nhập</a>
+                            </li>
+                            <li class="account-tool__item center">
+                                <a href="../pages/account_signup.html" class="account-tool__item-link">Đăng Ký</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="favorite-box">
+                        <i class="fa-solid fa-heart fa-beat"><span class="status">0</span></i>
+                        <span>Yêu thích</span>
+                        <div class="favorite-info">
+                            <span class="favorite-infor__title">
+                                Những ô tô yêu thích (<span class="favorite-info__status">0</span>)
+                            </span>
+                            <div class="favorite-list">
+                                <i class="fa-solid fa-heart favorite-info__no-cart-icon fa-beat"></i>
+                                <span class="favorite-info__no-cart-title">Hiện chưa có ô tô yêu thích, hãy thêm
+                                    ngay nhé!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-box">
+                        <a href="../pages/cart.html" class="cart-link center">
+                            <i class="fa-solid fa-cart-shopping fa-bounce">
+                                <span class="status">0</span>
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row navbar center">
+                <div class="navbar-list center">
+                    <div data-page="trang-chu" class="navbar-item">
+                        <a class="navbar-item__link" data-link="homepage" href="../../index.html">
+                            Trang chủ
+                        </a>
+                    </div>
+                    <div data-page="gioi-thieu" class="navbar-item">
+                        <a class="navbar-item__link" data-link="gioiThieu" href="../pages/gioiThieu.html">
+                            Giới thiệu
+                        </a>
+                    </div>
+                    <div data-page="xe-dien" class="navbar-item">
+                        <a class="navbar-item__link" data-link="carsPage" href="../pages/carsPage.html">
+                            Ô tô
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="navbar-item__sublist-box">
+                            <ul class="navbar-item__sublist">
+                                <li class="navbar-item__sublist-item">
+                                    <a href="#" class="navbar-item__sublist-item-link">Vinfast</a>
+                                    <ul class="navbar-item__sublist-item__list">
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                VF 3
+                                            </a>
+                                        </li>
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                VF 5
+                                            </a>
+                                        </li>
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                VF 6
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar-item__sublist-item">
+                                    <a href="#" class="navbar-item__sublist-item-link">Tesla</a>
+                                    <ul class="navbar-item__sublist-item__list">
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                Model S
+                                            </a>
+                                        </li>
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                Model 3
+                                            </a>
+                                        </li>
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                Model X
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar-item__sublist-item">
+                                    <a href="#" class="navbar-item__sublist-item-link">BMW</a>
+                                    <ul class="navbar-item__sublist-item__list">
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                i3
+                                            </a>
+                                        </li>
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                i4
+                                            </a>
+                                        </li>
+                                        <li class="navbar-item__sublist-item__item">
+                                            <a href="#" class="navbar-item__sublist-item__link">
+                                                iX
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div data-page="news" class="navbar-item">
+                        <a class="navbar-item__link" data-link="tinTuc" href="../pages/tinTuc.html">
+                            Tin tức
+                        </a>
+                    </div>
+                    <div data-page="faq" class="navbar-item">
+                        <a class="navbar-item__link" data-link="FAQ" href="../pages/FAQ.html">
+                            FAQ
+                        </a>
+                    </div>
+                    <div data-page="contact" class="navbar-item">
+                        <a class="navbar-item__link" data-link="lienHe" href="../pages/lienHe.html">
+                            Liên hệ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+            <div id="content">
+                <div class="content__current-position">
+                    <a
+                        href="../../index.html"
+                        class="content__current-position__home-page"
+                        >Trang chủ</a
+                    >
+                    <span style="margin: 0 5px">/</span>
+                    <a
+                        href="../pages/cart.html"
+                        class="content__current-position__current-page"
+                        >Đơn hàng</a
+                    >
+                </div>
+                <div class="cart-container">
+                    <h1 class="cart__heading-text">Đơn hàng</h1>
+                    <div class="cart-box"></div>
+                    <div class="cart-bill">
+                        <span class="cart-bill__now"
+                            >Tạm tính:
+                            <span class="pay-money-now">4.000.000 đ</span></span
+                        >
+                        <span class="cart-bill__pay"
+                            >Thành tiền:
+                            <span class="pay-money">4.000.000 đ</span></span
+                        >
+                    </div>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="footer-custom">
+                    <div class="footer-lists">
+                        <div class="footer-list-wrap">
+                            <h6 class="footer-hdr">Liên hệ số điện thoại</h6>
+                            <ul class="footer-links-sub">
+                                <li>
+                                    <a
+                                        href="tel:0934133644"
+                                        class="footer__phone-contact"
+                                        >0934133644</a
+                                    >
+                                </li>
+                            </ul>
+                            <h6 class="footer-hdr">Địa chỉ</h6>
+                            <ul class="footer-links-sub">
+                                <li>
+                                    <a href="" rel="nofollow"
+                                        >Trường đại học Công Nghệ Thực phẩm</a
+                                    >
+                                </li>
+                                <li>
+                                    <iframe
+                                        class="map"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0672268165654!2d106.6264673140711!3d10.806163161600724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUaOG7sWMgcGjhuqltIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1680999373482!5m2!1svi!2s"
+                                        style="border: 0; display: block"
+                                        allowfullscreen=""
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-list-wrap">
+                            <h6 class="footer-hdr">Thành viên nhóm</h6>
+                            <ul class="footer-links-sub">
+                                <li class="footer-members">
+                                    <a
+                                        href="https://www.facebook.com/profile.php?id=100017636919397"
+                                        class="member-name link"
+                                    >
+                                        Trần Tiến Đạt
+                                    </a>
+                                </li>
+                                <li class="footer-members">
+                                    <a
+                                        href="https://www.facebook.com/profile.php?id=100023512751077"
+                                        class="member-name link"
+                                    >
+                                        Diêu Thiệu Trần Huy
+                                    </a>
+                                </li>
+                                <li class="footer-members">
+                                    <a
+                                        href="https://www.facebook.com/profile.php?id=100029762739422"
+                                        class="member-name link"
+                                    >
+                                        Trần Gia Bảo
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-email">
+                        <h6 class="footer-hdr">
+                            Nếu có thắc mắc hay khiếu nại gì bạn có thể để lại
+                            email cho chúng tôi và chúng tôi sẽ liên hệ bạn
+                            trong thời gian sớm nhất
+                        </h6>
+                        <div id="footer-email" class="footer-email-form">
+                            <form id="footerEmailForm" action="#">
+                                <input
+                                    type="text"
+                                    name="email_address_"
+                                    id="footerEmailInput"
+                                    class="input"
+                                    placeholder="Enter email address"
+                                />
+                                <input
+                                    type="submit"
+                                    class="button"
+                                    value="SUBMIT"
+                                />
+                            </form>
+                        </div>
+                        <div class="footer-email-privacy-policy"></div>
+                    </div>
+                    <!--/.footer-email-->
+                    <div class="footer-social">
+                        <h6 class="footer-hdr">Follow Us</h6>
+                        <ul>
+                            <li>
+                                <a href="#" title="Facebook">
+                                    <img
+                                        width="24"
+                                        height="24"
+                                        alt="Like us on Facebook"
+                                        src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Google+">
+                                    <img
+                                        width="24"
+                                        height="24"
+                                        alt="Follow us on Google+"
+                                        src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <img
+                                        width="24"
+                                        height="24"
+                                        alt="Follow us on Pinterest"
+                                        src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="#">
+                                    <img
+                                        width="24"
+                                        height="24"
+                                        alt="Follow us on Instagram"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/640px-Instagram-Icon.png"
+                                    />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Twitter">
+                                    <img
+                                        width="67"
+                                        alt="Follow us on Twitter"
+                                        src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png"
+                                    />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.footer-social-->
+                    <div class="footer-legal">
+                        <p>
+                            &copy; Bản quyền thuộc về nhóm 2 |
+                            <a href="#" rel="nofollow">Privacy Policy</a>
+                            |
+                            <a href="#" rel="nofollow">Terms of Use</a>
+                            |
+                            <a href="#" rel="nofollow">Terms of Sale</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script
+            type="text/javascript"
+            src="https://code.jquery.com/jquery-1.11.0.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/cartPage.js"></script>
+    </body>
+</html>

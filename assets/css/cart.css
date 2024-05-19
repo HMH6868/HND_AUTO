@@ -1,0 +1,151 @@
+.cart-container {
+    padding: 48px 0;
+}
+
+.cart-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cart__heading-text {
+    font-size: 3.6rem;
+    margin-left: 48px;
+    margin-bottom: 14px;
+}
+
+.cart-item {
+    max-width: 80%;
+    width: 70%;
+    display: flex;
+    padding: 8px 16px;
+    margin: 14px auto;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.cart-item__info {
+    height: 100%;
+    width: 50%;
+    padding-left: 24px;
+}
+
+.cart-item__img {
+    max-height: 200px;
+    height: 200px;
+    width: 40%;
+    max-width: 40%;
+    margin: 0 8px;
+    border-radius: 4px;
+}
+
+.cart-item__name {
+    font-size: 1.6rem;
+}
+
+.cart-item__desc {
+    font-size: 1.5rem;
+}
+
+.cart-delete {
+    display: inline-block;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #2cb2ff;
+    margin-top: 24px;
+    padding: 8px;
+}
+
+.cart-delete:hover {
+    text-decoration: underline;
+}
+
+.cart__box-price {
+    min-height: 100%;
+    max-height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart__box-price-span {
+    font-size: 1.6rem;
+    color: #ff6651;
+    font-weight: 600;
+}
+
+.no-cart__img {
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    background: url(../imgs/no-cart/285-2852098_no-cart-items-found-carrito-de-compras-icono.png)
+        top center / contain no-repeat;
+}
+
+.cart-box__bottom {
+    padding: 14px 24px;
+    margin-top: 24px;
+}
+
+.cart-bill {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: right;
+}
+
+.cart-back,
+.cart-bill__pay,
+.cart-bill__now {
+    font-size: 1.8rem;
+    color: #000;
+}
+
+.cart-back {
+    text-decoration: underline;
+    transition: all linear 0.2s;
+}
+
+.pay-money-now,
+.pay-money {
+    font-weight: 700;
+    margin-left: 48px;
+}
+
+.pay-money {
+    font-size: 2rem;
+    color: #ff5722;
+}
+
+.cart-back:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 1023px) {
+    .cart-item {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 740px) {
+    .cart__heading-text {
+        font-size: 2rem;
+    }
+    
+    .cart-item__info {
+        padding-left: 0px;
+    }
+
+    .cart-item__img {
+        height: 100px;
+    }
+
+    .no-cart__img {
+        width: 95%;
+        margin: auto;
+    }
+}

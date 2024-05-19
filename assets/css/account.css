@@ -1,0 +1,120 @@
+#content {
+    background: url("../imgs/slider/slider_1.jpg") top center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 48px 0;
+}
+
+.account__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.account__form-item {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.signup-box,
+.login-box {
+    width: 500px;
+    max-width: 100vw;
+    background-color: #8ccae9;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    animation: move_right 2s;
+    animation-fill-mode: forwards;
+    padding: 24px 16px;
+}
+
+@keyframes move_left {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 190px;
+    }
+}
+
+@keyframes move_right {
+    from {
+        right: 0px;
+    }
+    to {
+        right: 190px;
+    }
+}
+
+.account-form__heading-text {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.account__form-label {
+    display: flex;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.account__input {
+    min-width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+    font-size: large;
+}
+
+.account__submit-btn {
+    width: 80%;
+    padding: 8px 0;
+    margin-top: 24px;
+    border: none;
+    color: gray;
+    font-size: 1.8rem;
+    transition: 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.account__submit-btn:hover {
+    background: var(--clr);
+    color: black;
+    border: 5px;
+    letter-spacing: 0.5em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+.para-2 {
+    text-align: center;
+    color: #c4d5ff;
+    font-size: 1.6rem;
+    animation: move_right 2s;
+    animation-fill-mode: forwards;
+}
+
+.para-2 a {
+    color: #e0ff66;
+}
+
+@media (max-width: 740px) {
+    .signup-box,
+    .login-box {
+        max-width: 90vw;
+    }
+}
