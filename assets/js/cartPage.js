@@ -64,7 +64,7 @@ function renderCart() {
         cartContainer.innerHTML = `
             <div class="no-cart__img"></div>
             <div class="cart-box__bottom">
-                <a href="./carsPage.html" class="cart-back">Tiếp tục chọn tour</a>
+                <a href="./carsPage.html" class="cart-back">Tiếp tục chọn chọn xe</a>
             </div>`;
     }
     if (cartItems.items.length <= 0) {

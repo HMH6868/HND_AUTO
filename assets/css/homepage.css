@@ -1,13 +1,13 @@
 .content-top__container {
     width: 100%;
-    height: 100%;
+    height: 92vh;
     min-height: 100%;
     min-width: 100%;
     padding: 24px 48px;
-    background: url(../imgs/background/Vinfast_bia.png) center / contain no-repeat;
+    background: url(../imgs/slider/desktop1.png) center / contain no-repeat;
+    background-size: 100% 100%;
     position: relative;
 }
-
 .content-top__container::after {
     content: "";
     z-index: -99;
@@ -16,7 +16,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background: url(../imgs/background/Vinfast_bia.png) cover / contain no-repeat;
+    background: url(../imgs/slider/desktop1.png) center / contain no-repeat;
     background-size: cover;
     overflow: hidden;
     -webkit-filter: blur(15px);
@@ -25,6 +25,7 @@
     -ms-filter: blur(15px);
     filter: blur(15px);
 }
+
 
 .content-top__subtitle {
     font-size: 3rem;
@@ -35,9 +36,9 @@
 }
 
 .content-top__title h1 {
-    font-size: 8rem;
+    font-size: 11rem;
     letter-spacing: 2px;
-    color: #ebe415;
+    color: #000;
     text-transform: uppercase;
     font-weight: 700;
     padding: 10px 0px;
@@ -54,6 +55,7 @@
 }
 
 .content-top__btn-container {
+    margin-top: 200px;
     display: flex;
     align-items: center;
 }
@@ -64,8 +66,8 @@
 
 .content-top__btn,
 .content-top__btn--transparent {
-    font-size: 1.8rem;
-    padding: 12px 18px;
+    font-size: 2.5rem;
+    padding: 20px 30px;
     color: white;
     margin: 0 14px;
     display: block;

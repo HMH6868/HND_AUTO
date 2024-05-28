@@ -24,7 +24,7 @@ function closeAlert(alertBox) {
     alertBox.style.opacity = "0";
 }
 
-function handleTourDuLich() {
+function handleXedien() {
     //render slider
     if (contentSlider) {
         let sliders = "";
@@ -188,4 +188,4 @@ function handleItemCar(idx) {
     });
 }
 
-handleTourDuLich();
+handleXedien();

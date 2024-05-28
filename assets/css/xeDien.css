@@ -24,6 +24,11 @@
     margin: 24px auto;
 }
 
+.car-item {
+    max-width: 25%;
+    min-width: 25%;
+}
+
 .widget {
     margin-top: 8px;
     width: 100%;

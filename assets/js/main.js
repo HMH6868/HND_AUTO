@@ -88,7 +88,7 @@ async function load() {
                 if (element.giaCu != 0) {
                     //Ghép dữ liệu và html lại với nhau
                     innerHtmlMainContent += `
-                    <div class="col l-3 m-6 s-12 center-mobile car-item">
+                    <div class="col l-3 m-4 s-12 center-mobile car-item">
                     <div class="widget">
                         <div style="background: url(${element.imgsCar[0]})
                         no-repeat center/cover;" class="widget__photo"></div>

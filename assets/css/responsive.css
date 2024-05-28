@@ -1,5 +1,9 @@
 /* Tablet and Mobile*/
 @media (max-width: 1023px) {
+    .logo-link {
+        max-width: 45%;
+    }
+
     #header {
         display: none;
     }
@@ -18,7 +22,7 @@
     #header-mobile .nav-bar {
         min-height: 4.375em;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding: 0 1.5em;
     }
@@ -73,7 +77,7 @@
     #header-mobile .hamburger {
         cursor: pointer;
         z-index: 99;
-        margin-right: 16px;
+        margin-right: 14px;
     }
 
     #header-mobile .hamburger::after {
@@ -130,18 +134,42 @@
         font-size: 1.8rem;
     }
 
+
+
     /* Content ======================================= */
+    .content-top__container{
+        background-size: 200% 100%;
+         height: 93vh;
+    }
     .content-top__container {
-        padding: 24px 16px;
+        padding: 24px 24px;
     }
 
     .content-top__title h1 {
-        font-size: 6rem;
+        font-size: 12rem;
+    }
+    .content-top__decs{
+        font-size: 3rem;
+    }
+
+    .content-top__btn-container {
+        margin-top: 400px;
+        margin-left: 10px;
+    }
+
+    .content-top__btn,
+    .content-top__btn--transparent {
+    font-size: 3rem;
+    padding: 20px 30px;
     }
 
     #closeIntrolBtn {
         top: 25%;
         right: 20px;
+    }
+
+    .car-item {
+        max-width: 250px;
     }
 
     /* Footer ======================================== */
@@ -153,6 +181,7 @@
     .map {
         max-width: 100%;
     }
+
 }
 
 /* Mobile */
@@ -161,4 +190,62 @@
         width: 95vw;
         height: 50vw;
     }
+
+    .logo-link {
+        max-width: 35%;
+    }
+
+    #header-mobile .hamburger { 
+        margin-right: 0;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+    /* content */
+    .content-top__container{
+        background-size: 200% 100%;
+         height: 90vh;
+    }
+    .content-top__title h1 {
+        font-size: 7rem;
+    }
+    .content-top__decs{
+        font-size: 1.5rem;
+    }
+    .content-top__btn-container {
+        margin-top: 250px;
+        margin-left: 10px;
+    }
+
+    .content-top__btn,
+    .content-top__btn--transparent {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    #header-mobile .hamburger { 
+        margin-right: 0;
+        margin-left: 8px;
+    }
+
+    #header-mobile .hamburger > span {
+        width: 24px;
+    }
+
+    #header-mobile .cart-box,
+    #header-mobile .favorite-box,
+    #header-mobile .account-link {
+        font-size: 1.4rem;
+    }
+    
 }
