@@ -178,7 +178,7 @@
     padding: 0 1rem;
     color: #fff;
     font-size: 15px;
-    border: 1px solid #5e4dcd;
+    border: 1px solid #000;
     border-radius: 6px 0 0 6px;
     background-color: transparent;
   }
@@ -188,7 +188,7 @@
     padding: .5em 1em;
     border: none;
     border-radius: 0 6px 6px 0;
-    background-color: #5e4dcd;
+    background-color: #000;
     color: #fff;
     font-size: 15px;
     cursor: pointer;
