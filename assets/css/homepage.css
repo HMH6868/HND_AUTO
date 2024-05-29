@@ -5,7 +5,7 @@
     min-width: 100%;
     padding: 24px 48px;
     background: url(../imgs/slider/desktop1.png) center / contain no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     position: relative;
 }
 .content-top__container::after {

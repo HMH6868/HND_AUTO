@@ -1,5 +1,7 @@
-html {
+#content {
     background: url("../imgs/slider/slider_5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #feedback-page {
