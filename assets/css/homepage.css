@@ -196,11 +196,11 @@
   }
   
   .button--submit:hover {
-    background-color: #5e5dcd;
+    background-color: var(--primary-color);
   }
   
   .input:focus, .input:focus-visible {
-    border-color: #3898EC;
+    border-color: var(--primary-color);
     outline: none;
   }
   
