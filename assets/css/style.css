@@ -528,6 +528,7 @@ body::-webkit-scrollbar-track {
 }
 
 .footer-social {
+    margin-top: 60px;
     text-align: center;
 }
 
@@ -544,6 +545,8 @@ body::-webkit-scrollbar-track {
 }
 
 .footer-legal {
+    padding: 5px 0;
+    text-align: center; 
     font-size: 1.2rem;
 }
 
