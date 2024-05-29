@@ -8,6 +8,7 @@
     background-size: cover;
     position: relative;
 }
+
 .content-top__container::after {
     content: "";
     z-index: -99;
@@ -168,11 +169,11 @@
 
 /* submit */
 
-   .input-group {
+.input-group {
     margin: 0 auto;
-  }
-  
-  .input {
+}
+
+.input {
     min-height: 50px;
     width: 500px;
     padding: 0 1rem;
@@ -181,9 +182,9 @@
     border: 1px solid #000;
     border-radius: 6px 0 0 6px;
     background-color: transparent;
-  }
-  
-  .button--submit {
+}
+
+.button--submit {
     min-height: 50px;
     padding: .5em 1em;
     border: none;
@@ -193,17 +194,14 @@
     font-size: 15px;
     cursor: pointer;
     transition: background-color .3s ease-in-out;
-  }
-  
-  .button--submit:hover {
+}
+
+.button--submit:hover {
     background-color: var(--primary-color);
-  }
-  
-  .input:focus, .input:focus-visible {
+}
+
+.input:focus,
+.input:focus-visible {
     border-color: var(--primary-color);
     outline: none;
-  }
-  
-
-
-
+}
