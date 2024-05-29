@@ -179,6 +179,10 @@
         right: 20px;
     }
 
+    .car-item>img{
+        object-fit: cover;
+    }
+
     .car-item {
         max-width: 250px;
     }
@@ -202,6 +206,10 @@
         max-width: fit-content;
     }
 
+    /* nút chuyển trong car */
+    .radio-inputs{
+        max-width: 600px;
+    }
 }
 
 /* Mobile */
@@ -212,18 +220,22 @@
     }
 
     .logo-link {
-        max-width: 35%;
+        max-width: 50%;
     }
 
     #header-mobile .hamburger {
         margin-right: 0;
     }
 
+    .car-item {
+        min-width: 350px;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .footer-left,
@@ -252,6 +264,12 @@
         font-size: 1.5rem;
         padding: 10px 15px;
     }
+
+    /* nút chuyển trong trang xe */
+    .radio-inputs{
+        font-size: 1.5rem;
+        max-width: 400px;
+    }
 }
 
 @media (max-width: 350px) {
@@ -270,4 +288,7 @@
         font-size: 1.4rem;
     }
 
+    .car-item {
+        max-width: 250px;
+    }
 }

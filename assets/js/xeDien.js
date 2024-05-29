@@ -3,7 +3,7 @@ const contentSlider = document.querySelector(".content-slider");
 let numberslider = 7;
 
 //Load main conten
-const dataUrl = "https://64069dc5862956433e556a26.mockapi.io/v1/diaDiemDuLich";
+const dataUrl = "https://66570a3f9f970b3b36c7b59a.mockapi.io/v1/xeotodien/otodien";
 fetch(dataUrl)
     .then((res) => res.json())
     .then((res) => {

@@ -56,7 +56,7 @@ async function load() {
     let searchInput = document.querySelector(".search-input");
     //Định nghĩa biết chứa thông tin link database từ server
     const dataUrl =
-        "https://64069dc5862956433e556a26.mockapi.io/v1/diaDiemDuLich";
+        "https://66570a3f9f970b3b36c7b59a.mockapi.io/v1/xeotodien/otodien";
     //Lấy dữ liệu từ server
     const response = await fetch(dataUrl);
     //Chuyển từ json sang object
