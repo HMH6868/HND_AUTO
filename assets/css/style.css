@@ -438,7 +438,7 @@ body::-webkit-scrollbar-track {
 
 .footer-container {
     width: 100%;
-    max-width: 1008px;
+    max-width: 1800px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;

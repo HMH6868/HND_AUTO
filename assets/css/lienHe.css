@@ -117,3 +117,6 @@ textarea:focus {
         max-width: 90vw;
     }
 }
+#footer{
+    padding: 0;
+}
