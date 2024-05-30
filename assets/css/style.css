@@ -665,6 +665,7 @@ footerEmailForm #footerEmailInput:hover {
     padding: 5px 0;
     text-align: center;
     font-size: 1.2rem;
+    background-color: #efefef;
 }
 
 .map {
