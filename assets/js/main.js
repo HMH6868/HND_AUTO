@@ -108,7 +108,7 @@ async function load() {
                                 <div class="center">
                                     <span>Quãng đường: </span>
                                     <span class="widget__info-range">
-                                        ${element.range} km
+                                        ${element.range}
                                     </span>
                                 </div>
                                 <div class="center">

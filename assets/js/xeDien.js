@@ -164,6 +164,9 @@ function handleItemCar(idx) {
                     <button data-item=${idx} class="itemCar__rightcolumn--card--btn order-btn">
                         Đặt Xe
                     </button>
+                    <button data-item=${idx} class="itemCar__rightcolumn--card--btn order-btn">
+                        <a href="https://forms.gle/3XAqbs3RbfDLQKh49">Đánh giá</a>
+                    </button>
                 </div>
             </div>
         </div>
