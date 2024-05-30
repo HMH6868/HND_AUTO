@@ -1,6 +1,6 @@
 html{
   max-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #content {
