@@ -148,11 +148,8 @@
         background-size: cover;
         background-position: left;
         background-position-x: -400px;
-        height: 93vh;
-    }
-
-    .content-top__container {
         padding: 24px 24px;
+        margin-top: 60px;
     }
 
     .content-top__title h1 {
@@ -166,12 +163,13 @@
     .content-top__btn-container {
         margin-top: 400px;
         margin-left: 10px;
+        justify-content: center;
     }
 
     .content-top__btn,
     .content-top__btn--transparent {
-        font-size: 3rem;
-        padding: 20px 30px;
+        font-size: 2.5rem;
+        padding: 15px 25px ;
     }
 
     #closeIntrolBtn {

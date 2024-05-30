@@ -840,10 +840,11 @@ footerEmailForm #footerEmailInput:hover {
 /* submit */
 
 .input-group {
+    margin-top: 30px !important ;
     margin: 0 auto;
 }
 
-.input {
+.input { 
     min-height: 50px;
     width: 500px;
     padding: 0 1rem;
