@@ -1,12 +1,10 @@
 #content {
-    background: url("../imgs/slider/slider_5.jpg");
+    background: url("../imgs/slider/BG_Lienhe2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
 }
 
-#feedback-page {
-    text-align: center;
-}
 
 .contact {
     width: 100%;
@@ -16,7 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 70vh;
 }
+
 
 #contact__div {
     background: transparent;
@@ -24,19 +24,28 @@
     border-radius: 20px;
     backdrop-filter: blur(20px);
     padding: 35px 35px 50px;
-    width: 450px;
+    width: 550px;
     float: left;
     left: 50%;
 }
 
+#contact__div h3{
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 10px 0;
+    justify-content: center;
+    text-align: center;
+}
+
 #contact__div #comment,
 #contact__div #email,
-#contact__div #name {
+#contact__div #name{
     font-size: 1.5rem;
     padding: 8px 14px;
     margin: 4px 0;
     border-radius: 4px;
     width: 100%;
+    border: #3c3c3c 1px solid;
 }
 
 .focused {
