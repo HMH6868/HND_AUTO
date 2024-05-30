@@ -842,13 +842,14 @@ footerEmailForm #footerEmailInput:hover {
 .input-group {
     margin-top: 30px !important ;
     margin: 0 auto;
+
 }
 
 .input { 
     min-height: 50px;
     width: 500px;
     padding: 0 1rem;
-    color: #fff;
+    color: #000;
     font-size: 15px;
     border: 1px solid #000;
     border-radius: 6px 0 0 6px;
