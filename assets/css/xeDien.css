@@ -80,6 +80,27 @@
     position: relative;
 }
 
+.horizontal-container {
+    /* Ensures that the container does not wrap its children */
+    white-space: nowrap;
+}
+
+.horizontal-item {
+    /* Set display to inline-block to make the divs behave like inline elements */
+    display: inline-block;
+    /* Add margin or padding as needed */
+    margin-right: 10px; /* Add some space between items */
+    /* Add other styling as needed */
+    background-color: lightblue;
+    padding: 10px;
+}
+
+#thumbs-up{
+
+}
+#thumbs-up:hover{
+color: aqua;
+}
 .widget__name {
     font-size: 1.6rem;
     color: rgba(0, 0, 0, 0.8);
@@ -139,6 +160,28 @@
 }
 
 .widget__button {
+    z-index: 1;
+    cursor: pointer;
+    -webkit-transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: absolute;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 70%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    left: 0;
+    right: 0;
+    top: -40px;
+}
+.widget__button2{
     z-index: 1;
     cursor: pointer;
     -webkit-transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);

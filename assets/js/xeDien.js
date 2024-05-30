@@ -69,6 +69,9 @@ function handleXedien() {
     });
 }
 
+function handleLikeItemCar(data) {
+    localStorage.setItem("like-items", JSON.stringify(cartItems));
+}
 function handleItemCar(idx) {
     //tạo biến để ngắn gọn code
     let data = array[idx];

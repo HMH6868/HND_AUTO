@@ -269,29 +269,29 @@
                 <!-- nút chuyển giữa các xe -->
                 <div class="radio-inputs">
                     <label class="radio">
-                      <input type="radio" name="radio" checked="">
+                      <input type="radio" name="radio" value="all" checked="">
                       <span class="name">Tất cả</span>
                     </label>
                     <label class="radio">
-                      <input type="radio" name="radio">
+                      <input type="radio" value="Vinfast" name="radio">
                       <span class="name">Vinfast</span>
                     </label>
                     <label class="radio">
-                      <input type="radio" name="radio">
+                      <input type="radio" value="BMW" name="radio">
                       <span class="name">BMW</span>
                     </label>
                     <label class="radio">
-                        <input type="radio" name="radio">
-                        <span class="name">Huyndai</span>
+                        <input type="radio" value="Hyundai" name="radio">
+                        <span class="name">Hyundai</span>
                       </label>
                       <label class="radio">
-                        <input type="radio" name="radio">
+                        <input type="radio" value="Tesla" name="radio">
                         <span class="name">Tesla</span>
                       </label>
                   </div>
 
-                <div class="content-main grid wide">
-                    <div style="margin: 0;" class="row"></div>
+                <div class="content-main grid wide" >
+                    <div style="margin: 0;" class="row" id = "body"></div>
                 </div>
             </div>
             <footer id="footer">
@@ -408,6 +408,41 @@
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/xeDien.js"></script>
+        <script >
+
+            $(document).ready(function() {
+                $('div[data-target').css({
+                    'display': 'none',
+                });
+                $('input[name="radio"]').change(function() {
+                    if($(this).val() == "all"){
+                        $('div[data-target').css({
+                            'display': 'block',
+                        });
+                    }else{
+                        if($(this).is(':checked')) {
+                            $('div[data-target').css({
+                                'display': 'none',
+                            });
+                            $('div[data-target="'+$(this).val()+'"]').css({
+                                'display': 'block',
+                            });
+                        }    
+                    }
+                });
+                // $('div[data-page="xe-dien"]').hover(
+                //     function() {
+                //         // Function for mouseenter (hover in)
+                //         //$(".navbar-item__sublist-item__link").css({'display': 'none'});
+                //     },
+                //     function() {
+                //         // Function for mouseleave (hover out)
+                //         $(".navbar-item__sublist-item__list").css({'display': 'block'});
+                //     }
+                // );
+
+            });
+        </script>
     </body>
 
 </html>

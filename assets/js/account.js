@@ -3,7 +3,7 @@ let form = document.querySelector(".account__form");
 form.onsubmit = (e) => {
     e.preventDefault();
 };
-const accountUrl = "https://64069dc5862956433e556a26.mockapi.io/v1/accounts";
+const accountUrl = "https://66570a3f9f970b3b36c7b59a.mockapi.io/v1/xeotodien/account";
 
 let dataAccount = [];
 fetch(accountUrl)
@@ -12,6 +12,12 @@ fetch(accountUrl)
         dataAccount = res;
     });
 
+let dataAccountExit = [];
+fetch(accountUrl)
+    .then((res) => res.json())
+    .then((res) => {
+        dataAccountExit = res;
+    });
 function handleLogin() {
     console.log(dataAccount);
 }
