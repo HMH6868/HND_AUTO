@@ -1,3 +1,7 @@
+html{
+    overflow-y: hidden;
+}
+
 #content {
     background-color: #e8e8e8;
     height: 100vh;
@@ -15,7 +19,7 @@
 }
 
 .form-container {
-    width: 500px;
+    width: 600px;
     background-color: #fff;
     padding: 32px 24px;
     font-size: 14px;
