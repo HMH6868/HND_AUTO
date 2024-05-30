@@ -1,18 +1,13 @@
-body {
-    overflow-y: hidden;
-}
+
 
 #content {
-    /* background-image: url("../imgs/slider/slider_1.jpg"); */
     background-color: aliceblue;
-    background-size: cover;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 48px 0;
 }
 
 .account__form {
