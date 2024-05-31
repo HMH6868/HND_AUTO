@@ -12,8 +12,7 @@
         <link rel="stylesheet" href="../css/config.css" />
         <link rel="stylesheet" href="../css/style.css" />
         <link rel="stylesheet" href="../css/grid.css" />
-        <link rel="stylesheet" href="../css/gioiThieu.css" />
-        <link rel="stylesheet" href="../css/forgetpass.css" />
+        <link rel="stylesheet" href="../css/veri-code.css" />
         <link rel="stylesheet" href="../css/responsive.css" />
         <title>HND Auto</title>
     </head>
@@ -258,16 +257,21 @@
             <div id="content">
                 <div class="form-container">
                     <div class="logo-container">
-                      Quên Mật Khẩu
+                      Nhập OTP
                     </div>
               
                     <form class="form">
                       <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+                        <div class="inputContainer">
+                            <input required="required" maxlength="1" type="text" class="otp-input" id="otp-input1">
+                            <input required="required" maxlength="1" type="text" class="otp-input" id="otp-input2">
+                            <input required="required" maxlength="1" type="text" class="otp-input" id="otp-input3">
+                            <input required="required" maxlength="1" type="text" class="otp-input" id="otp-input4"> 
+                            
+                           </div>
                       </div>
               
-                      <button class="form-submit-btn" type="submit">Gửi mã sang gmail</button>
+                      <button class="form-submit-btn" type="submit">Xác Nhận</button>
                     </form>
               
                     <p class="signup-link">
@@ -275,14 +279,12 @@
                       <a href="./account_signup.html" class="signup-link link">Đăng ký</a>
                     </p>
                   </div>
-            </div>
         </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="../js/main.js"></script>
-        <script src="../js/account.js"></script>
-        <script src="../js/forget-pass.js"></script>
+        <script src="../js/veri-code.js"></script>
     </body>
 
 </html>
