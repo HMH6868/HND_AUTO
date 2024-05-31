@@ -78,7 +78,7 @@
     width: 100%;
     height: 400px;
     margin: auto;
-    background: url(../imgs/no-cart/285-2852098_no-cart-items-found-carrito-de-compras-icono.png) top center / contain no-repeat;
+    background: url(../imgs/no-cart/pngtree-shoping-cart-line-icon-vector-png-image_6638081.png) top center / contain no-repeat;
 }
 
 .cart-box__bottom {
@@ -95,6 +95,7 @@
     align-items: center;
     flex-direction: column;
     float: right;
+    margin-bottom: 50px;
 }
 
 .cart-back,
