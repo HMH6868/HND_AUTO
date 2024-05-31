@@ -31,7 +31,12 @@ loginForm.onsubmit = (e) => {
 
                 }
             } else {
-                alert("Email này chưa được đăng ký.");
+                let userResponse = confirm("Gmail này chưa đăng ký tài khoản. Bạn có muốn đăng ký tài khoản không?");
+                if (userResponse) {
+                    window.location.href = "./account_signup.html";
+                } else {
+                    emailInput.focus();
+                }
             }
         })
         .catch((error) => {
@@ -41,19 +46,14 @@ loginForm.onsubmit = (e) => {
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Select all buttons with the class 'social-button'
     let socialButtons = document.querySelectorAll(".social-button");
 
-    // Add a click event listener to each social button
     socialButtons.forEach(function(button) {
         button.addEventListener("click", function(event) {
-            // Prevent the default action if it's a form submission or link
             event.preventDefault();
 
-            // Show an alert message
             alert("Tính năng này đang bảo trì, vui lòng đăng nhập bằng email.");
 
-            // Focus on the input field with the ID 'email'
             let emailInput = document.getElementById("email");
             if (emailInput) {
                 emailInput.focus();
