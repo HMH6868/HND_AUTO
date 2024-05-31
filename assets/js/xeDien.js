@@ -1,4 +1,5 @@
 let array = [];
+
 const contentSlider = document.querySelector(".content-slider");
 let numberslider = 7;
 
@@ -108,11 +109,45 @@ function handleItemCar(idx) {
         <div class="itemCar">
             <div class="itemCar__leftcolumn">
                 <div class="itemCar__leftcolumn--card">
+                    
                     <div class="card-content">
-                        <img
-                            class="itemCar__leftcolumn--card--picture"
-                            src="${data.imgsCar[0]}"
-                        />
+                        <div class="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                        <img
+                                        class="itemCar__leftcolumn--card--picture"
+                                        src="${data.imgsCar[0]}"
+                                    />
+                                    
+                                </div>
+                                <div class="carousel-item">
+                                    <img
+                                    class="itemCar__leftcolumn--card--picture"
+                                    src="${data.imgsCar[1]}"
+                                    />
+                                </div>
+                                    <div class="carousel-item">
+                                    <img
+                                    class="itemCar__leftcolumn--card--picture"
+                                    src="${data.imgsCar[2]}"
+                                    />
+                                </div>
+                                <div class="carousel-item">
+                                <img
+                                class="itemCar__leftcolumn--card--picture"
+                                src="${data.imgsCar[3]}"
+                                />
+                        </div>
+                            </div>
+                            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+                            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+                            <div class="carousel-indicators">
+                                <span class="indicator active" onclick="goToSlide(0)"><img src="${data.imgsCar[0]}"/></span>
+                                <span class="indicator" onclick="goToSlide(1)"><img src="${data.imgsCar[1]}"/></span>
+                                <span class="indicator" onclick="goToSlide(2)"><img src="${data.imgsCar[2]}"/></span>
+                                <span class="indicator" onclick="goToSlide(3)"><img src="${data.imgsCar[3]}"/></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -173,7 +208,7 @@ function handleItemCar(idx) {
                     >
                         ${data.gioiThieu}
                     </p>
-                    <p style="color: gold; font-size: 36px;">★★★★★</p>
+                    <p style="color: gold; font-size: 24px;">★ ${data.eva}</p>
                     <button data-item=${idx} class="itemCar__rightcolumn--card--btn order-btn">
                         Đặt Xe
                     </button>
@@ -205,3 +240,43 @@ function handleItemCar(idx) {
 }
 
 handleXedien();
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-item');
+    const indicators = document.querySelectorAll('.indicator');
+    if (index >= slides.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = slides.length - 1;
+    } else {
+        currentIndex = index;
+    }
+    const offset = -currentIndex * 100;
+    let carouselInner = document.querySelector('.carousel-inner');
+    if (carouselInner) {
+        document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    }
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentIndex);
+    });
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === currentIndex);
+    });
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+function goToSlide(index) {
+    showSlide(index);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+});
