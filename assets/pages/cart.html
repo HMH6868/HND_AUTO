@@ -287,24 +287,34 @@
                     <!-- Form thanh toán -->
                     <form id="payment-form" style="display: none">
                         <h2>Thông tin thanh toán</h2>
-                        <label for="name">Tên người nhận:</label>
-                        <input type="text" id="name" name="name" required />
+                        <div style="margin-top: 10px;">
+                            <label for="name">Tên người nhận:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
 
-                        <label for="address">Địa chỉ:</label>
-                        <input type="text" id="address" name="address" required />
+                        <div style="margin-top: 10px;">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" id="address" name="address" required />
+                        </div>
 
-                        <label for="phone">Số điện thoại:</label>
-                        <input type="tel" id="phone" name="phone" required />
 
-                        <label for="payment-method">Phương thức thanh toán:</label>
-                        <select id="payment-method" name="payment-method" required>
-                            <option value="cash">Tiền mặt</option>
-                            <option value="bank">Ngân hàng</option>
-                        </select>
+                        <div style="margin-top: 10px;">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="tel" id="phone" name="phone" required />
+                        </div>
+
+
+                        <div style="margin-top: 10px;">
+                            <label for="payment-method">Phương thức thanh toán:</label>
+                            <select class="payment-method" name="payment-method" required>
+                                <option value="cash">Tiền mặt</option>
+                                <option value="bank">Ngân hàng</option>
+                            </select>
+                        </div>
 
                         <!-- Mã QR chỉ hiện khi chọn phương thức thanh toán là ngân hàng -->
                         <div id="qr-code" style="display: none">
-                            <img src="link-to-qr-code-image" alt="Mã QR Ngân hàng" />
+                            <img src="../imgs/QR/QR.png" alt="Mã QR Ngân hàng" />
                         </div>
 
                         <button id="confirm-payment">

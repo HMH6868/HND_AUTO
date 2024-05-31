@@ -36,6 +36,7 @@
     max-width: 40%;
     margin: 0 8px;
     border-radius: 4px;
+    object-fit: cover;
 }
 
 .cart-item__name {
@@ -162,23 +163,27 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    width: 700px;
 }
 
 #payment-form h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #333;
 }
 
 #payment-form label {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: #333;
 }
 
 #payment-form input,
 #payment-form select {
+    margin-top: 5px ;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1.5rem;
@@ -198,16 +203,20 @@
 }
 
 #qr-code {
-    display: none;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
 }
 
 #qr-code img {
     max-width: 100%;
-    height: auto;
     border-radius: 5px;
+    height: auto;
+    margin: 0 auto;
+ 
 }
-
 #payment-overlay {
     display: none;
     position: fixed;
