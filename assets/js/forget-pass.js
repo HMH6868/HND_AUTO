@@ -24,9 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Email is registered, redirect to verification code page
                     window.location.href = "./veri-code.html";
                 } else {
-                    // Email is not registered, show alert
-                    alert("Gmail này chưa đăng ký tài khoản.");
-                    emailInput.focus(); // Focus back to the email input
+                    // Email is not registered, show confirmation dialog
+                    let userResponse = confirm("Gmail này chưa đăng ký tài khoản. Bạn có muốn đăng ký tài khoản không?");
+                    if (userResponse) {
+                        // Redirect to account signup page
+                        window.location.href = "./account_signup.html";
+                    } else {
+                        // Focus back to the email input
+                        emailInput.focus();
+                    }
                 }
             })
             .catch(error => {
