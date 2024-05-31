@@ -89,4 +89,29 @@ submitBtn.onclick = function () {
     } else if (type == "register") {
         handleRegister();
     }
+
+    
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all buttons with the class 'social-button'
+    let socialButtons = document.querySelectorAll(".social-button");
+
+    // Add a click event listener to each social button
+    socialButtons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            // Prevent the default action if it's a form submission or link
+            event.preventDefault();
+
+            // Show an alert message
+            alert("Tính năng này đang bảo trì, vui lòng đăng ký bằng email.");
+
+            // Focus on the input field with the class 'regis-first-name'
+            let firstNameInput = document.querySelector(".regis-first-name");
+            if (firstNameInput) {
+                firstNameInput.focus();
+            }
+        });
+    });
+});
+
