@@ -76,9 +76,21 @@ function renderCart() {
 
 // Xử lý sự kiện click nút "Thanh Toán"
 payButton.addEventListener("click", () => {
+    // Kiểm tra xem giỏ hàng có hàng hay không
+    if (cartItems.items.length === 0) {
+        if (confirm("Giỏ hàng của bạn đang trống. Bạn có muốn tiếp tục mua sắm không?")) {
+            // Nếu đồng ý, chuyển sang trang carsPage.html
+            window.location.href = "./carsPage.html";
+        }
+        // Nếu không đồng ý, không làm gì cả
+        return; // Ngăn chặn tiến trình tiếp tục nếu giỏ hàng trống và người dùng không muốn tiếp tục mua sắm
+    }
+    // Nếu giỏ hàng không trống, hiển thị form thanh toán
     paymentForm.classList.add("active");
     paymentOverlay.classList.add("active");
 });
+
+
 
 // Xử lý sự kiện thay đổi phương thức thanh toán
 paymentMethodSelect.addEventListener("change", (e) => {
