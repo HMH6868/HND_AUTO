@@ -30,7 +30,7 @@ function marginHeader() {
             sublist.style.overflow = "scroll";
         }
         sublist.style.maxHeight = `calc((100vh) - ${header.clientHeight}px)`;
-        // content.style.marginTop = `${header.clientHeight}px`;
+        content.style.marginTop = `${header.clientHeight}px`;
     } else {
         //Margin top cho phần content
         let headerMobile = document.getElementById("header-mobile");
@@ -41,7 +41,7 @@ function marginHeader() {
             sublist.style.overflow = "scroll";
         }
         sublist.style.maxHeight = `calc((100vh) - ${headerMobile.clientHeight}px)`;
-        // content.style.marginTop = `${headerMobile.clientHeight}px`;
+        content.style.marginTop = `${headerMobile.clientHeight}px`;
     }
 }
 
