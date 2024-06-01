@@ -1,9 +1,8 @@
 let array = [];
-
 const contentSlider = document.querySelector(".content-slider");
 let numberslider = 7;
 
-//Load main conten
+// Load main content
 const dataUrl = "https://66599465de346625136d0a61.mockapi.io/api/v1/otodien/otodien";
 fetch(dataUrl)
     .then((res) => res.json())
@@ -26,7 +25,7 @@ function closeAlert(alertBox) {
 }
 
 function handleXedien() {
-    //render slider
+    // Render slider
     if (contentSlider) {
         let sliders = "";
         for (let i = 1; i <= numberslider; i++) {
@@ -43,7 +42,7 @@ function handleXedien() {
         contentSlider.innerHTML = sliders;
     }
 
-    //setup slider
+    // Setup slider
     $(document).ready(function () {
         $(".content-slider").slick({
             centerMode: true,
@@ -58,7 +57,7 @@ function handleXedien() {
         });
     });
 
-    //tùy chỉnh nút next prev của slider
+    // Customize next and prev buttons for the slider
     $(".content-slider__prev-btn").click(function (e) {
         e.preventDefault();
         $(".content-slider").slick("slickPrev");
@@ -71,14 +70,17 @@ function handleXedien() {
 }
 
 function handleItemCar(idx) {
-    //tạo biến để ngắn gọn code
+    // Initialize selectedImage
+    let selectedImage = "";
+
+    // Create a variable for brevity
     let data = array[idx];
 
-    //Chuyển từ dạng 1000 => 1.000
+    // Convert numbers to localized strings
     let giaCu = Number(data.giaCu).toLocaleString("en-US");
     let giaVe = Number(data.giaVe).toLocaleString("en-US");
 
-    // Show thông tin xe ra
+    // Show car information
     content.innerHTML = `
         <div style="margin-top:${(header.clientHeight / 2)}px;" class="alertBox">
             Đã đặt xe thành công !
@@ -183,10 +185,7 @@ function handleItemCar(idx) {
                         <ion-icon name="time-outline"></ion-icon>
                         Thời gian sạc: ${data.charging_time}
                     </p>    
-                    <p
-                        class="itemCar__rightcolumn--card--car--item__title"
-                        style="font-size: 14px"
-                    >
+                    <p class="itemCar__rightcolumn--card--car--item__title" style="font-size: 14px">
                         <ion-icon name="shield-checkmark-outline"></ion-icon>
                         Bảo hành: ${data.warranty}
                     </p>
@@ -213,7 +212,7 @@ function handleItemCar(idx) {
                         Đặt Xe
                     </button>
                     <button data-item=${idx} class="itemCar__rightcolumn--card--btn order-btn">
-                        <a href="https://forms.gle/3XAqbs3RbfDLQKh49">Đánh giá</a>
+                        <a target="_blank" href="https://forms.gle/3XAqbs3RbfDLQKh49">Đánh giá</a>
                     </button>
                 </div>
             </div>
@@ -221,19 +220,21 @@ function handleItemCar(idx) {
         `;
 
     document.body.scrollIntoView({ behavior: "smooth", block: "start" });
-    //Thêm trình xử lý sự kiện để chọn ảnh
+
     const indicators = document.querySelectorAll('.indicator');
     indicators.forEach((indicator, i) => {
         indicator.addEventListener('click', () => {
-            selectedImage = data.imgsCar[i]; // Cập nhật hình ảnh đã chọn
+            selectedImage = data.imgsCar[i];
         });
     });
 
     let datVe = document.querySelector(".order-btn");
-    datVe.addEventListener("click", function (e) {
+    datVe.addEventListener("click", function (e
+    ) {
         let orderCar = array[Number(e.target.dataset.item)];
+        
         if (selectedImage) {
-            orderCar.imgsCar[0] = selectedImage; // Cập nhật ảnh với ảnh đã chọn
+            orderCar.imgsCar[0] = selectedImage;
         }
         let amount = cartItems.amount;
         cartItems.items.push(orderCar);
@@ -243,7 +244,6 @@ function handleItemCar(idx) {
         };
         localStorage.setItem("cart-items", JSON.stringify(cartItems));
         showAlert();
-        // Set số lượng hàng trong cart cho thằng status
         cartAmount.forEach((e) => {
             e.innerHTML = cartItems.amount || 0;
         });
