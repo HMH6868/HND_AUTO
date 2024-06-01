@@ -221,9 +221,20 @@ function handleItemCar(idx) {
         `;
 
     document.body.scrollIntoView({ behavior: "smooth", block: "start" });
+    //Thêm trình xử lý sự kiện để chọn ảnh
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => {
+            selectedImage = data.imgsCar[i]; // Cập nhật hình ảnh đã chọn
+        });
+    });
+
     let datVe = document.querySelector(".order-btn");
     datVe.addEventListener("click", function (e) {
         let orderCar = array[Number(e.target.dataset.item)];
+        if (selectedImage) {
+            orderCar.imgsCar[0] = selectedImage; // Cập nhật ảnh với ảnh đã chọn
+        }
         let amount = cartItems.amount;
         cartItems.items.push(orderCar);
         cartItems = {
@@ -232,7 +243,7 @@ function handleItemCar(idx) {
         };
         localStorage.setItem("cart-items", JSON.stringify(cartItems));
         showAlert();
-        //Set số lượng hàng trong cart cho thằng status
+        // Set số lượng hàng trong cart cho thằng status
         cartAmount.forEach((e) => {
             e.innerHTML = cartItems.amount || 0;
         });
