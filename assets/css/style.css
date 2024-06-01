@@ -341,70 +341,65 @@
     color: var(--primary-color);
 }
 
-.navbar-item__sublist {
-    transform: scale(0);
-    transform-origin: top left;
-    transition: all linear 0.2s;
-    width: max-content;
+.navbar-item__sublist-box {
     position: absolute;
     top: 100%;
     left: 0;
+    display: none;
+}
+
+.navbar-item:hover .navbar-item__sublist-box {
+    display: block;
+}
+
+.navbar-item__sublist {
+    width: max-content;
     background-color: #fff;
     z-index: 10;
     box-shadow: 0 0 4px 2px #ccc;
     border-radius: 10px;
 }
 
-.navbar-item:hover .navbar-item__sublist {
-    transform: scale(1);
-}
-
 .navbar-item__sublist-item {
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar-item__sublist-item-link {
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    min-width: 20%;
-    background-color: #f3f5f7;
-    height: auto;
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    padding: 14px 16px;
-    font-size: 1.4rem;
-    word-wrap: unset;
-    width: 20%;
-}
-
-.navbar-item__sublist-item-link:hover {
-    text-decoration: underline;
+    position: relative;
 }
 
 .navbar-item__sublist-item__list {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0 4px 2px #ccc;
+    border-radius: 10px;
+    z-index: 10;
 }
 
-.navbar-item__sublist-item__link {
-    width: 100%;
+.navbar-item__sublist-item:hover .navbar-item__sublist-item__list {
     display: block;
-    padding: 8px 16px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+.navbar-item__sublist-item-link,
+.navbar-item__sublist-item__link {
+    padding: 14px 16px;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    display: block;
+    transition: all linear 0.2s;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    min-width: 100px;
+    max-width: 200px;
+}
+
+.navbar-item__sublist-item-link:hover,
 .navbar-item__sublist-item__link:hover {
     color: var(--primary-color);
+    text-decoration: underline;
 }
+
+
 
 /*=============== Content =============== */
 #content {

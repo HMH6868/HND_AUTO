@@ -43,7 +43,7 @@ function handleXedien() {
     }
 
     // Setup slider
-    $(document).ready(function() {
+    $(document).ready(function () {
         $(".content-slider").slick({
             centerMode: true,
             slidesToShow: 1,
@@ -58,12 +58,12 @@ function handleXedien() {
     });
 
     // Customize next and prev buttons for the slider
-    $(".content-slider__prev-btn").click(function(e) {
+    $(".content-slider__prev-btn").click(function (e) {
         e.preventDefault();
         $(".content-slider").slick("slickPrev");
     });
 
-    $(".content-slider__next-btn").click(function(e) {
+    $(".content-slider__next-btn").click(function (e) {
         e.preventDefault();
         $(".content-slider").slick("slickNext");
     });
@@ -219,10 +219,7 @@ function handleItemCar(idx) {
         </div>
         `;
 
-    document.body.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
+    document.body.scrollIntoView({ behavior: "smooth", block: "start" });
 
     const indicators = document.querySelectorAll('.indicator');
     indicators.forEach((indicator, i) => {
@@ -232,9 +229,10 @@ function handleItemCar(idx) {
     });
 
     let datVe = document.querySelector(".order-btn");
-    datVe.addEventListener("click", function(e) {
+    datVe.addEventListener("click", function (e
+    ) {
         let orderCar = array[Number(e.target.dataset.item)];
-
+        
         if (selectedImage) {
             orderCar.imgsCar[0] = selectedImage;
         }
@@ -292,4 +290,10 @@ function goToSlide(index) {
 
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentIndex);
+});
+
+
+history.pushState(null,null,window.location.href)
+window.addEventListener('popstate',function(e){
+    this.window.location.reload()
 });

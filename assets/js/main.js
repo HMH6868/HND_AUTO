@@ -141,6 +141,8 @@ async function load() {
                 `;
                 }
             });
+
+            
         } else {
             innerHtmlMainContent += `
                 <h1 class="not-found-item">Không tìm thấy dữ liệu</h1>
@@ -156,6 +158,8 @@ async function load() {
                 navMenu.classList.remove("active");
             })
         );
+
+
     }
 
     //Load dữ liệu của thằng tour du lịch
@@ -227,3 +231,60 @@ async function load() {
 window.onload = () => {
     load();
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+    const apiUrl = "https://66599465de346625136d0a61.mockapi.io/api/v1/otodien/otodien";
+
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            const manufacturers = {};
+
+            // Phân loại dữ liệu theo hãng xe
+            data.forEach((car, index) => {
+                const manufacturer = car.manufacturer;
+                const model = car.tenXe;
+
+                if (!manufacturers[manufacturer]) {
+                    manufacturers[manufacturer] = [];
+                }
+
+                manufacturers[manufacturer].push({ model, index });
+            });
+
+            // Tạo menu từ dữ liệu đã phân loại
+            const carManufacturersList = document.getElementById("car-manufacturers");
+            for (const [manufacturer, models] of Object.entries(manufacturers)) {
+                const listItem = document.createElement("li");
+                listItem.classList.add("navbar-item__sublist-item");
+
+                const link = document.createElement("a");
+                link.href = "../pages/carsPage.html";
+                link.classList.add("navbar-item__sublist-item-link");
+                link.textContent = manufacturer;
+
+                const subList = document.createElement("ul");
+                subList.classList.add("navbar-item__sublist-item__list");
+
+                models.forEach(({ model, index }) => {
+                    const subListItem = document.createElement("li");
+                    subListItem.classList.add("navbar-item__sublist-item__item");
+
+                    const subLink = document.createElement("a");
+                    subLink.href = `../pages/carsPage.html`;
+                    subLink.classList.add("navbar-item__sublist-item__link");
+                    subLink.textContent = model;
+
+                    subListItem.appendChild(subLink);
+                    subList.appendChild(subListItem);
+                });
+
+                listItem.appendChild(link);
+                listItem.appendChild(subList);
+                carManufacturersList.appendChild(listItem);
+            }
+        })
+});
+
+
+

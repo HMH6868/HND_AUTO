@@ -104,8 +104,8 @@
             <header id="header">
                 <div class="row header-top">
                     <div class="col center logo l-3 m-6 s-12 full-h">
-                        <a href="../../index.html" class="center logo-link full-h">
-                            <img src="../imgs/logo/HND.png" alt="logo" class="logo-img full-h" />
+                        <a href="./index.html" class="center logo-link full-h">
+                            <img src="./assets/imgs/logo/HND.png" alt="logo" class="logo-img full-h" />
                         </a>
                     </div>
                     <div class="col l-5">
@@ -118,17 +118,17 @@
                     </div>
                     <div class="col logo l-3 m-6 s-12 account-and-cart center">
                         <div class="account-box">
-                            <a href="../pages/account_signin.html" class="account-link center">
+                            <a href="./assets/pages/account_signin.html" class="account-link center">
                                 <i class="fa-solid fa-user"></i>
                                 <span>Tài khoản</span>
                             </a>
                             <ul class="account-tool">
                                 <li class="account-tool__item center">
-                                    <a href="../pages/account_signin.html" class="account-tool__item-link">Đăng
+                                    <a href="./assets/pages/account_signin.html" class="account-tool__item-link">Đăng
                                         Nhập</a>
                                 </li>
                                 <li class="account-tool__item center">
-                                    <a href="../pages/account_signup.html" class="account-tool__item-link">Đăng Ký</a>
+                                    <a href="./assets/pages/account_signup.html" class="account-tool__item-link">Đăng Ký</a>
                                 </li>
                             </ul>
                         </div>
@@ -147,7 +147,7 @@
                             </div>
                         </div>
                         <div class="cart-box">
-                            <a href="../pages/cart.html" class="cart-link center">
+                            <a href="./assets/pages/cart.html" class="cart-link center">
                                 <i class="fa-solid fa-cart-shopping fa-bounce">
                                     <span class="status">0</span>
                                 </i>
@@ -156,7 +156,7 @@
                     </div>
                 </div>
                 <div class="row navbar center">
-                    <div class="navbar-list center">
+                    <div class="navbar-list center" id="navbar-list">
                         <div data-page="trang-chu" class="navbar-item">
                             <a class="navbar-item__link" data-link="homepage" href="../../index.html">
                                 Trang chủ
@@ -167,73 +167,14 @@
                                 Giới thiệu
                             </a>
                         </div>
-                        <div data-page="xe-dien" class="navbar-item">
+                        <div data-page="xe-dien" class="navbar-item" id="xe-dien">
                             <a class="navbar-item__link" data-link="carsPage" href="../pages/carsPage.html">
                                 Ô tô
                                 <i class="fa-solid fa-angle-down"></i>
                             </a>
                             <div class="navbar-item__sublist-box">
-                                <ul class="navbar-item__sublist">
-                                    <li class="navbar-item__sublist-item">
-                                        <a href="#" class="navbar-item__sublist-item-link">Vinfast</a>
-                                        <ul class="navbar-item__sublist-item__list">
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    VF 3
-                                                </a>
-                                            </li>
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    VF 5
-                                                </a>
-                                            </li>
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    VF 6
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="navbar-item__sublist-item">
-                                        <a href="#" class="navbar-item__sublist-item-link">Tesla</a>
-                                        <ul class="navbar-item__sublist-item__list">
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    Model S
-                                                </a>
-                                            </li>
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    Model 3
-                                                </a>
-                                            </li>
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    Model X
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="navbar-item__sublist-item">
-                                        <a href="#" class="navbar-item__sublist-item-link">BMW</a>
-                                        <ul class="navbar-item__sublist-item__list">
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    i3
-                                                </a>
-                                            </li>
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    i4
-                                                </a>
-                                            </li>
-                                            <li class="navbar-item__sublist-item__item">
-                                                <a href="#" class="navbar-item__sublist-item__link">
-                                                    iX
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                <ul class="navbar-item__sublist" id="car-manufacturers">
+                                    <!-- Dữ liệu sẽ được chèn ở đây bằng JavaScript -->
                                 </ul>
                             </div>
                         </div>
