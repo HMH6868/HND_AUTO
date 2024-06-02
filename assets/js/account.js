@@ -1,97 +1,115 @@
-let submitBtn = document.querySelector(".account__submit-btn");
-let form = document.querySelector(".account__form");
-form.onsubmit = (e) => {
-    e.preventDefault();
-};
-const accountUrl = "https://66599465de346625136d0a61.mockapi.io/api/v1/otodien/account";
-
-let dataAccount = [];
-fetch(accountUrl)
-    .then((res) => res.json())
-    .then((res) => {
-        dataAccount = res;
-    });
-
-let dataAccountExit = [];
-fetch(accountUrl)
-    .then((res) => res.json())
-    .then((res) => {
-        dataAccountExit = res;
-    });
-function handleLogin() {
-    console.log(dataAccount);
-}
-
-function checkEnableAccount(account) {
-    let check = true;
-    for (let i = 0; i < dataAccount.length; i++) {
-        if (dataAccount[i].email == account.email) {
-            check = false;
-            break;
-        }
-    }
-    return check;
-}
-
-function handleRegister() {
-    let firstName = document.querySelector(".regis-first-name");
-    let lastName = document.querySelector(".regis-last-name");
-    let email = document.querySelector(".regis-email");
-    let password = document.querySelector(".regis-password");
-    let repassword = document.querySelector(".regis-repassword");
-    let account = {
-        firstName: firstName.value.trim(),
-        lastName: lastName.value.trim(),
-        email: email.value.trim(),
-        password: password.value.trim(),
-        repassword: repassword.value.trim(),
+document.addEventListener("DOMContentLoaded", () => {
+    let submitBtn = document.querySelector(".account__submit-btn");
+    let form = document.querySelector(".account__form");
+    form.onsubmit = (e) => {
+        e.preventDefault();
     };
-    if (
-        firstName.value != "" &&
-        lastName.value != "" &&
-        validateEmail(email.value) &&
-        password.value.length >= 6 &&
-        password.value != "" &&
-        repassword.value != "" &&
-        repassword.value == password.value
-    ) {
-        if (checkEnableAccount(account)) {
-            firstName.value = "";
-            lastName.value = "";
-            email.value = "";
-            password.value = "";
-            repassword.value = "";
-            fetch(accountUrl, {
-                method: "POST",
-                mode: "cors",
-                cache: "no-cache",
-                credentials: "same-origin",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                redirect: "follow",
-                referrerPolicy: "no-referrer",
-                body: JSON.stringify(account),
-            });
-            confirm("Đăng ký thành công !");
+    const accountUrl = "https://66599465de346625136d0a61.mockapi.io/api/v1/otodien/account";
+
+    let dataAccount = [];
+    fetch(accountUrl)
+        .then((res) => res.json())
+        .then((res) => {
+            dataAccount = res;
+        });
+
+    function handleLogin() {
+        console.log(dataAccount);
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    function checkEnableAccount(account) {
+        let check = true;
+        for (let i = 0; i < dataAccount.length; i++) {
+            if (dataAccount[i].email === account.email) {
+                check = false;
+                break;
+            }
+        }
+        return check;
+    }
+
+    function handleRegister() {
+        let firstName = document.querySelector(".regis-first-name");
+        let lastName = document.querySelector(".regis-last-name");
+        let email = document.querySelector(".regis-email");
+        let password = document.querySelector(".regis-password");
+        let repassword = document.querySelector(".regis-repassword");
+        let account = {
+            firstName: firstName.value.trim(),
+            lastName: lastName.value.trim(),
+            email: email.value.trim(),
+            password: password.value.trim(),
+            repassword: repassword.value.trim(),
+        };
+
+        if (
+            firstName.value !== "" &&
+            lastName.value !== "" &&
+            validateEmail(email.value) &&
+            password.value.length >= 6 &&
+            password.value !== "" &&
+            repassword.value !== "" &&
+            repassword.value === password.value
+        ) {
+            if (checkEnableAccount(account)) {
+                firstName.value = "";
+                lastName.value = "";
+                email.value = "";
+                password.value = "";
+                repassword.value = "";
+                fetch(accountUrl, {
+                    method: "POST",
+                    mode: "cors",
+                    cache: "no-cache",
+                    credentials: "same-origin",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    redirect: "follow",
+                    referrerPolicy: "no-referrer",
+                    body: JSON.stringify(account),
+                }).then(() => {
+                    confirm("Đăng ký thành công!");
+                });
+            } else {
+                alert("Email này đã có người đăng ký");
+                email.value = "";
+                email.focus();
+            }
         } else {
-            alert("Email này đã có người đăng ký");
-            email.value = "";
-            email.focus();
+            if (!validateEmail(email.value)) {
+                email.style.borderColor = "red";
+                alert("Email không đúng định dạng. Vui lòng nhập lại.");
+                email.focus();
+                email.addEventListener('input', () => {
+                    email.style.borderColor = "";
+                });
+            } else if (password.value !== repassword.value) {
+                repassword.style.borderColor = "red";
+                alert("Mật khẩu không giống nhau");
+                repassword.focus();
+                repassword.addEventListener('input', () => {
+                    repassword.style.borderColor = "";
+                });
+            }
         }
     }
-}
 
-submitBtn.onclick = function () {
-    let type = submitBtn.dataset.type;
-    if (type == "login") {
-        handleLogin();
-    } else if (type == "register") {
-        handleRegister();
-    }
+    submitBtn.onclick = function () {
+        let type = submitBtn.dataset.type;
+        if (type === "login") {
+            handleLogin();
+        } else if (type === "register") {
+            handleRegister();
+        }
+    };
+});
 
-    
-};
 
 document.addEventListener("DOMContentLoaded", function() {
     // Select all buttons with the class 'social-button'
