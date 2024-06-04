@@ -332,6 +332,24 @@
             <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
             <script src="../js/main.js"></script>
+            <script>
+                const form = document.querySelector('.contact__div--form');
+                const submitButton = document.querySelector('#button-blue');
+
+                submitButton.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+
+                    const emailInput = document.querySelector('#email').value;
+
+                    const isValidEmail = validateEmail(emailInput);
+                    if (!isValidEmail) {
+                        alert('Vui lòng nhập đúng định dạng email!');
+                        return; 
+                    }
+
+                    alert('Cảm ơn bạn đã gửi thư cho chúng tôi!');
+                });
+            </script>
     </body>
 
 </html>
