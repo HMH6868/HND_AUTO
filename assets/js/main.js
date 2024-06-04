@@ -287,4 +287,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+function showConfirmation() {
+    const emailInput = document.getElementById("Email");
+    const emailValue = emailInput.value;
 
+    // Kiểm tra định dạng Gmail
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(emailValue)) {
+        alert("Vui lòng nhập đúng định dạng Gmail!");
+        emailInput.classList.add("error-border"); // Thêm viền màu đỏ
+        emailInput.focus();
+        return;
+    }
+
+    alert("Cảm ơn bạn đã gửi Gmail cho chúng tôi!");
+}
