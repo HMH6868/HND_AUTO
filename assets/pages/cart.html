@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="../css/gioiThieu.css" />
         <link rel="stylesheet" href="../css/cart.css" />
         <link rel="stylesheet" href="../css/responsive.css" />
+        <link rel="stylesheet" href="../css/chat.css">
         <title>HND Auto</title>
     </head>
 
@@ -59,16 +60,27 @@
                             </a>
                         </div>
                     </ul>
-                    <div class="account-box">
-                        <a href="#" class="account-link center">
+                    <div id="mb-avatarlogin" class="account-box hide" >
+                        <a class="account-link center">
                             <i class="fa-solid fa-user"></i>
                         </a>
-                        <ul class="account-tool">
+                        <ul class="account-tool ">
                             <li class="account-tool__item center">
-                                <a href="../pages/account_signin.html" class="account-tool__item-link">Đăng Nhập</a>
+                                <a href="../pages/account_signin.html" class="account-tool__item-link">Đăng
+                                    Nhập</a>
                             </li>
                             <li class="account-tool__item center">
                                 <a href="../pages/account_signup.html" class="account-tool__item-link">Đăng Ký</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="mb-avatarlogout" class="account-box">
+                        <a  href="#" class="account-link center">
+                            <img src="../imgs/no-cart/OIP.jpg" style="width: 20px;height: 20px; "  >
+                        </a>
+                        <ul class="account-tool">
+                            <li class="account-tool__item center" action-toggle="logoutData" >
+                                <a href="../pages/account_signin.html"  action-toggle="logoutData" class="account-tool__item-link">Đăng Xuẩt</a>
                             </li>
                         </ul>
                     </div>
@@ -117,20 +129,31 @@
                         </div>
                     </div>
                     <div class="col logo l-3 m-6 s-12 account-and-cart center">
-                        <div class="account-box">
-                            <a href="../pages/account_signin.html" class="account-link center">
+                        <div id="avatarlogin" class="account-box hide" >
+                            <a class="account-link center">
                                 <i class="fa-solid fa-user"></i>
                                 <span>Tài khoản</span>
                             </a>
-                            <ul class="account-tool">
+                            <ul class="account-tool ">
                                 <li class="account-tool__item center">
-                                    <a href="../pages/account_signin.html" class="account-tool__item-link">Đăng Nhập</a>
+                                    <a href="../pages/account_signin.html" class="account-tool__item-link">Đăng
+                                        Nhập</a>
                                 </li>
                                 <li class="account-tool__item center">
                                     <a href="../pages/account_signup.html" class="account-tool__item-link">Đăng Ký</a>
                                 </li>
                             </ul>
                         </div>
+                        <div id="avatarlogout" class="account-box">
+                            <a  href="#" class="account-link center">
+                                <img src="../imgs/no-cart/OIP.jpg" style="width: 50px;height: 50px;" alt="description of the image" >
+                            </a>
+                            <ul class="account-tool">
+                                <li class="account-tool__item center" action-toggle="logoutData" >
+                                    <a href="../pages/account_signin.html" action-toggle="logoutData" class="account-tool__item-link">Đăng Xuẩt</a>
+                                </li>
+                            </ul>
+                        </div> 
                         <div class="favorite-box">
                             <i class="fa-solid fa-heart fa-beat"><span class="status">0</span></i>
                             <span>Yêu thích</span>
@@ -375,9 +398,13 @@
                 </p>
             </div>
         </div>
+        <div class="rc-widget">
+            <iframe id="rocketchat-iframe" src="https://chats.tino.org/livechat" style="width: 100%; height: 100%; border: none; background-color: transparent; display: initial;"></iframe>
+        </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="../js/home.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/cartPage.js"></script>
     </body>

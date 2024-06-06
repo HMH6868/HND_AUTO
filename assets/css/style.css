@@ -16,7 +16,9 @@
     opacity: 0;
     transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
 }
-
+.account-box.hide {
+    display: none;
+}
 .closebtn {
     color: white;
     font-weight: bold;
@@ -169,7 +171,7 @@
 
 .account-and-cart>* {
     display: block;
-    padding: 0 18px;
+    padding: 0 20px;
     cursor: pointer;
     position: relative;
     height: 100%;

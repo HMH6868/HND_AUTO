@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (account) {
                     if (account.password === password) {
                         alert("Đăng nhập thành công!");
+                        localStorage.setItem('isLogin', true);
                         // Redirect to the homepage
                         window.location.href = "../../index.html";
                     } else {
@@ -67,3 +68,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+

@@ -130,3 +130,4 @@ paymentOverlay.addEventListener("click", () => {
     paymentForm.classList.remove("active");
     paymentOverlay.classList.remove("active");
 });
+

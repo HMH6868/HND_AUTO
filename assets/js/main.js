@@ -302,3 +302,5 @@ function showConfirmation() {
 
     alert("Cảm ơn bạn đã gửi Gmail cho chúng tôi!");
 }
+
+

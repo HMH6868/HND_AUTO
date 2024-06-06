@@ -297,3 +297,4 @@ history.pushState(null,null,window.location.href)
 window.addEventListener('popstate',function(e){
     this.window.location.reload()
 });
+
